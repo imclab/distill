@@ -7,6 +7,8 @@ from kmeans import KMeansCluster
 from util import *
 #from fastcluster import *
 import scipy
+import scipy.spatial
+import scipy.cluster
 
 
 def get_magnitude(p):
@@ -47,7 +49,7 @@ for line1 in lines:
 
 #signatures = get_signatures('crime.csv');
 dist_vec = scipy.spatial.distance.squareform(weight)
-clusters = single(dist_vec)
+clusters = scipy.cluster.hierarchy.single(dist_vec)
 print clusters
 
 data ={}
