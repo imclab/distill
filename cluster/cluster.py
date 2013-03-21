@@ -67,12 +67,27 @@ for cluster in clusters:
 	j =  j+1
 
 
+
+def print_tree(d, n):
+	if(n == 0):
+		print d
+		return
+	print_tree(d[0], n-1)
+	print_tree(d[1], n-1)
+
+
+
+print_tree(data[n+j-1], 0)
+
 #print data[n+j-1]
 
-print data[cluster_index[n+j-1][0]]
-print "\n===============================\n"
-print data[cluster_index[n+j-1][1]]
+#print data[cluster_index[n+j-1][0]]
 #print "\n===============================\n"
-#print data[cluster_index[cluster_index[n+j-1][1]][1]]
+#print data[cluster_index[n+j-1][1]]
 
+'''
+print data[cluster_index[cluster_index[n+j-1][1]][0]]
+print "\n===============================\n"
+print data[cluster_index[cluster_index[n+j-1][1]][1]]
+'''
 
