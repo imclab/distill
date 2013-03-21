@@ -3,9 +3,9 @@
 # Creator: Anant Bhardwaj
 
 import re, random
-from kmeans import KMeansCluster 
+from kmeans import KMeansCluster
 from util import *
-from fastcluster import *
+#from fastcluster import *
 import scipy
 
 
@@ -17,7 +17,7 @@ def get_magnitude(p):
 def get_distance(p1, p2):
 	return levenshtein(p1, p2);
 
- 
+
 #data = open("../data/crime.csv", 'rU').read()
 #data = open("../data/cut.csv", 'rU').read()
 #data = open("../data/labor.csv", 'rU').read()
@@ -25,7 +25,7 @@ data = open("../data/tomcat.log", 'rU').read()
 #data = open("../data/multicolumn_cut.csv", 'rU').read()
 #data = open("../data/hadoop.log", 'rU').read()
 lines = re.split('\n',data);
-lines = filter(lambda x: x!='\n' and x!='', lines)	
+lines = filter(lambda x: x!='\n' and x!='', lines)
 
 """
 kmc = KMeansCluster(5, lines, get_magnitude, get_distance)
@@ -65,7 +65,7 @@ for cluster in clusters:
 	cluster_index[n+j].append(int(cluster[0]))
 	cluster_index[n+j].append(int(cluster[1]))
 	j =  j+1
-	
+
 
 #print data[n+j-1]
 
