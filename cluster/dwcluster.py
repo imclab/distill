@@ -18,12 +18,12 @@ def get_distance(p1, p2):
 	return levenshtein(p1, p2);
 
  
-#data = open("crime.csv", 'rU').read()
-#data = open("cut.csv", 'rU').read()
-#data = open("labor.csv", 'rU').read()
-data = open("tomcat.log", 'rU').read()
-#data = open("multicolumn_cut.csv", 'rU').read()
-#data = open("hadoop.log", 'rU').read()
+#data = open("../data/crime.csv", 'rU').read()
+#data = open("../data/cut.csv", 'rU').read()
+#data = open("../data/labor.csv", 'rU').read()
+data = open("../data/tomcat.log", 'rU').read()
+#data = open("../data/multicolumn_cut.csv", 'rU').read()
+#data = open("../data/hadoop.log", 'rU').read()
 lines = re.split('\n',data);
 lines = filter(lambda x: x!='\n' and x!='', lines)	
 
